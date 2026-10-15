@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이마트24 PL '고맙다옹' | 책임형 길고양이 급여 키트 상품 기획 발표회</title>
+  
+  <!-- SEO & 메타 정보 -->
+  <meta name="description" content="이마트24 단독 PL '고맙다옹' - 사료와 컵 물, 정리봉투가 하나로 구성된 책임형 길고양이 일회용 급여 키트 상품 기획 발표용 웹페이지">
+  <meta name="keywords" content="이마트24, 고맙다옹, 편의점PL, 길고양이사료, 펫프렌들리, 클린피딩, 상품기획">
+  <meta property="og:title" content="이마트24 PL '고맙다옹' 상품 기획 발표회">
+  <meta property="og:description" content="기존 NB가 무엇을 먹일까에 집중했다면, 고맙다옹은 어떻게 책임 있게 먹일까에 집중합니다.">
+  <meta property="og:image" content="image_1024.png">
+
+  <!-- 웹폰트 (Pretendard & Noto Sans KR) -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  
+  <!-- 스타일시트 -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 스크롤 진행 바 -->
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+  <!-- ======================================================================
+       상단 고정 헤더 (Global Navigation Bar)
+       ====================================================================== -->
+  <header class="gnb-header">
+    <div class="gnb-container">
+      <div class="brand-logo-area">
+        <div class="emart-badge">
+          <span>emart</span><span>24</span>
+        </div>
+        <div class="brand-title">
+          <span>고맙다옹</span>
+          <span class="badge-pl">I'm e PL</span>
+        </div>
+      </div>
+
+      <nav class="gnb-nav" aria-label="메인 네비게이션">
+        <a href="#sec-hero" class="active">01. 개요</a>
+        <a href="#sec-market">02. 시장 기회</a>
+        <a href="#sec-persona">03. 페르소나</a>
+        <a href="#sec-product">04. 제품 구성</a>
+        <a href="#sec-guide">05. 3대 수칙</a>
+        <a href="#sec-shorts">06. 바이럴 쇼츠</a>
+        <a href="#sec-strategy">07. 차별화 전략</a>
+        <a href="#sec-retail">08. 매대 & 기대효과</a>
+      </nav>
+
+      <div class="gnb-actions">
+        <button type="button" class="btn-pitch-mode" id="pitchFullscreenBtn" title="슬라이드 맞춤 발표 모드 토글 (단축키: F)">
+          <span id="pitchModeIcon">🖥️</span> <span id="pitchModeLabel">발표 모드</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       프레젠테이션 플로팅 컨트롤 바 (Slide Deck Controls)
+       ====================================================================== -->
+  <div class="pitch-control-bar" id="pitchControlBar" aria-label="슬라이드 이동 컨트롤">
+    <button type="button" class="pitch-nav-btn" id="pitchPrevBtn" title="이전 슬라이드 (단축키: ← 또는 ↑)">◀</button>
+    <div class="pitch-slide-count" id="slideCount">01 / 08</div>
+    <button type="button" class="pitch-nav-btn" id="pitchNextBtn" title="다음 슬라이드 (단축키: →, ↓ 또는 Space)">▶</button>
+    <div class="pitch-divider"></div>
+    <div class="pitch-shortcuts-hint">
+      단축키: <kbd>Space</kbd> / <kbd>→</kbd> 다음 슬라이드, <kbd>←</kbd> 이전, <kbd>F</kbd> 발표모드/전체화면
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       섹션 1: HERO - 기획 개요 및 키 비주얼 (Slide 01)
+       ====================================================================== -->
+  <section class="section section-hero" id="sec-hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text-box">
+          <div class="hero-badge-wrap">
+            <span class="badge-proposal">2026 이마트24 PL 신상품 기획 제안서</span>
+            <span class="badge-partner">펫 프렌들리 상생 프로젝트</span>
+          </div>
+
+          <h1 class="hero-title">
+            기존 NB가 '무엇을 먹일까'에 집중했다면,<br>
+            <span class="highlight-yellow">고맙다옹은 '어떻게 책임 있게 먹일까'에 집중합니다.</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            사료 + 컵 물 + 정리봉투를 하나에 담은 올인원 듀얼 캡슐 키트.<br>
+            길에서 마주친 고양이와의 따뜻한 한 끼, 뒷정리까지 깔끔하게 책임지는 이마트24 단독 PL 급여 솔루션입니다.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#sec-product" class="btn-primary">
+              <span>📦</span> 제품 구성 둘러보기
+            </a>
+            <a href="#sec-shorts" class="btn-secondary">
+              <span>📱</span> 9:16 바이럴 쇼츠 보기
+            </a>
+          </div>
+
+          <!-- 핵심 지표 요약 그리드 -->
+          <div class="hero-metrics-grid">
+            <div class="metric-item">
+              <div class="metric-val">+40<span>%</span></div>
+              <div class="metric-lbl">이마트24 펫용품 신장률</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-val">75<span>%</span></div>
+              <div class="metric-lbl">주거 상권 매출 비중</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-val">80<span>g</span> + 물</div>
+              <div class="metric-lbl">1회 급여 일체형 캡슐</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-val">Clean</div>
+              <div class="metric-lbl">3대 펫티켓 슬리브 수칙</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 히어로 키 비주얼 카드 (실제 편의점 매대 샷 활용) -->
+        <div class="hero-visual-box">
+          <div class="hero-visual-card">
+            <img src="image_1024.png" alt="이마트24 반려동물용품 매대에 진열된 고맙다옹 꼬마냥/어른냥 밥물세트" class="zoomable-img">
+            <div class="hero-card-overlay">
+              <div class="hero-overlay-tag">EMART24 RETAIL SHELF MOCKUP</div>
+              <div class="hero-overlay-title">이마트24 반려동물 코너 진열 시뮬레이션</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       섹션 2: MARKET - 시장의 결핍과 이마트24의 기회 (Slide 02)
+       ====================================================================== -->
+  <section class="section section-market" id="sec-market">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Market Insight & Opportunity</span>
+        <h2 class="section-title">길고양이 급여의 3대 한계와 이마트24의 압도적 기회</h2>
+        <p class="section-desc">
+          성장하는 편의점 반려동물 시장을 기반으로, 길고양이를 챙기고 싶지만 준비물이 없는 2030 고객의 잠재 수요를 공략합니다.
+        </p>
+      </div>
+
+      <div class="market-grid">
+        <!-- 기존 시장 문제점 (Pain Points) -->
+        <div class="market-card problem-card">
+          <span class="card-badge">CURRENT PAIN POINTS</span>
+          <h3 class="market-card-title">기존 길고양이 급여의 3대 딜레마</h3>
+          <ul class="problem-list">
+            <li>
+              <div class="list-icon">📦</div>
+              <div class="list-content">
+                <h4>대용량(1~3kg) 보관 및 가격 부담</h4>
+                <p>일반 사료 한 봉지는 길에서 만난 고양이 한 마리를 챙겨주기에는 양도 너무 많고 가격(1~2만원대)도 부담스럽습니다.</p>
+              </div>
+            </li>
+            <li>
+              <div class="list-icon">🥣</div>
+              <div class="list-content">
+                <h4>깨끗한 음용수와 밥그릇 부재</h4>
+                <p>사료를 사더라도 급여할 식기가 없고, 길고양이에게 가장 절실한 깨끗한 물을 함께 제공하기 어렵습니다.</p>
+              </div>
+            </li>
+            <li>
+              <div class="list-icon">🚫</div>
+              <div class="list-content">
+                <h4>방치된 쓰레기와 주민 갈등 발생</h4>
+                <p>먹이고 난 빈 캔이나 사료가 골목에 방치되어 악취와 해충을 유발하고, 주민 민원과 이웃 간 마찰로 이어집니다.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 이마트24의 솔루션 및 기회 (Market Opportunity) -->
+        <div class="market-card opportunity-card">
+          <span class="card-badge">EMART24 ADVANTAGE</span>
+          <h3 class="market-card-title">이마트24의 독보적 인프라 & 시장성</h3>
+          <ul class="opportunity-list">
+            <li>
+              <div class="list-icon">📈</div>
+              <div class="list-content">
+                <h4>최근 3개년 펫 상품 매출 40% 신장</h4>
+                <p>편의점이 반려동물 관련 용품의 주요 구매 채널로 급부상하며 오프라인 즉시 구매 수요가 지속적으로 확대되고 있습니다.</p>
+              </div>
+            </li>
+            <li>
+              <div class="list-icon">🏠</div>
+              <div class="list-content">
+                <h4>주거 상권 매출 비중 75% 집약</h4>
+                <p>원룸촌·주택가 등 골목길 동선에 위치하여, 귀가길 우연한 만남에 즉각 대응할 수 있는 최적의 지리적 접근성을 갖추었습니다.</p>
+              </div>
+            </li>
+            <li>
+              <div class="list-icon">✨</div>
+              <div class="list-content">
+                <h4>업계 최초 '클린 피딩' 상생 브랜드 선점</h4>
+                <p>단순 먹이 판매를 넘어 정리봉투와 가이드를 결합함으로써, 이마트24의 펫 프렌들리 ESG 브랜드 이미지를 구축합니다.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 포지셔닝 비교 매트릭스 -->
+      <div class="matrix-box">
+        <div class="matrix-header">
+          <h3>기존 NB(제조사 브랜드) vs 이마트24 PL '고맙다옹' 비교 매트릭스</h3>
+        </div>
+        <table class="matrix-table">
+          <thead>
+            <tr>
+              <th>구분</th>
+              <th>일반 고양이 사료 / 캔 (NB)</th>
+              <th>이마트24 PL '고맙다옹'</th>
+              <th>차별화 효과</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>핵심 지향점</strong></td>
+              <td>"무엇을 먹일까" (영양·기호성 중심)</td>
+              <td class="highlight-row">"어떻게 책임 있게 먹일까" (행동 문화 중심)</td>
+              <td>펫티켓 기반 신규 카테고리 창출</td>
+            </tr>
+            <tr>
+              <td><strong>제품 구성</strong></td>
+              <td>사료 단품 또는 캔 단품</td>
+              <td class="highlight-row">사료 80g + 컵 물 + 정리봉투 + 식기 일체형</td>
+              <td>별도 준비물 0개 (올인원)</td>
+            </tr>
+            <tr>
+              <td><strong>구매 상황</strong></td>
+              <td>사전 계획 구매 (자택 급여용)</td>
+              <td class="highlight-row">귀가길 우연한 만남에 즉시 구매 (길 급여용)</td>
+              <td>편의점 특화 즉시성(Instant) 극대화</td>
+            </tr>
+            <tr>
+              <td><strong>뒷정리 프로세스</strong></td>
+              <td>구매자 개인에게 일임 (방치 위험)</td>
+              <td class="highlight-row">3대 수칙 슬리브 및 전용 회수봉투 동봉</td>
+              <td>골목길 환경 보호 및 민원 원천 차단</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       섹션 3: PERSONA - 24세 김서연과 5단계 사용자 여정 (Slide 03)
+       ====================================================================== -->
+  <section class="section section-persona" id="sec-persona">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Target Persona & Customer Journey</span>
+        <h2 class="section-title">24세 대학생 김서연의 귀가길 여정</h2>
+        <p class="section-desc">
+          길고양이를 좋아하지만 무거운 사료를 챙겨 다니지는 않는 1인 가구 청년층의 감성과 행동 패턴을 정밀 타깃팅했습니다.
+        </p>
+      </div>
+
+      <div class="persona-layout">
+        <!-- 페르소나 카드 (기획안 이미지 연동) -->
+        <div class="persona-card">
+          <div class="persona-header-row">
+            <div class="persona-avatar-wrap">
+              <img src="79dbf808-f2d6-49b6-8975-ff4f90122758.png" alt="김서연 페르소나" class="zoomable-img">
+              <span class="zoom-badge">🔍 확대</span>
+            </div>
+            <div class="persona-title-box">
+              <h3>김서연 (Kim Seo-yeon)</h3>
+              <p>24세 / 대학생 / 원룸 1인 가구</p>
+              <div class="persona-tags">
+                <span class="persona-tag">#동물좋아해요</span>
+                <span class="persona-tag">#원룸촌거주</span>
+                <span class="persona-tag">#편의점일1~2회</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="persona-quote-box">
+            “오늘도 만나서 반가워, 잘 먹어! 💕<br>
+            한 번 챙겨주고 싶은데 사료 한 봉지는 부담스럽고, 물이랑 그릇도 없네... 주변을 지저분하게 만들고 싶진 않아.”
+          </div>
+
+          <div class="persona-detail-list">
+            <div class="persona-detail-item">
+              <span class="lbl">생활 패턴</span>
+              <span class="val">학교·알바·카페 동선, 이마트24 매일 이용</span>
+            </div>
+            <div class="persona-detail-item">
+              <span class="lbl">반려동물 현황</span>
+              <span class="val">직접 키우진 않지만 길고양이에 높은 관심</span>
+            </div>
+            <div class="persona-detail-item">
+              <span class="lbl">구매 부담</span>
+              <span class="val">일반 사료 한 봉지는 1회 급여 목적에 과다</span>
+            </div>
+            <div class="persona-detail-item">
+              <span class="lbl">책임 의식</span>
+              <span class="val">사료·그릇 방치로 이웃에 피해 주는 것 극도로 기피</span>
+            </div>
+          </div>
+
+          <button type="button" class="btn-view-board" onclick="document.querySelector('.persona-avatar-wrap img').click()">
+            📋 기획 원본 페르소나 보드 전체보기
+          </button>
+        </div>
+
+        <!-- 5단계 인터랙티브 여정 스텝퍼 -->
+        <div class="journey-stepper-wrap">
+          <div class="journey-header">
+            <h3>5단계 고객 경험 여정 (Customer Journey)</h3>
+          </div>
+
+          <div class="journey-step-tabs">
+            <button type="button" class="step-tab-btn active" data-step="0">
+              <span class="num">01</span>발견
+            </button>
+            <button type="button" class="step-tab-btn" data-step="1">
+              <span class="num">02</span>방문
+            </button>
+            <button type="button" class="step-tab-btn" data-step="2">
+              <span class="num">03</span>선택
+            </button>
+            <button type="button" class="step-tab-btn" data-step="3">
+              <span class="num">04</span>급여
+            </button>
+            <button type="button" class="step-tab-btn" data-step="4">
+              <span class="num">05</span>회수
+            </button>
+          </div>
+
+          <div class="journey-card-display" id="journeyDisplay">
+            <span class="journey-step-badge" id="journeyStepBadge">1단계</span>
+            <h4 class="journey-step-title" id="journeyStepTitle">우연한 만남 — 길고양이 발견</h4>
+            <p class="journey-step-desc" id="journeyStepDesc">
+              학교나 아르바이트를 마치고 원룸촌으로 돌아가던 중, 골목길 화단 근처에서 길고양이를 마주칩니다. 안쓰러운 마음에 그냥 지나치기 어렵지만, 사료나 식기를 가지고 있지 않습니다.
+            </p>
+            <div class="journey-step-tip" id="journeyStepTip">
+              💡 김서연의 고민: "한 번 챙겨주고 싶은데 가방에 사료도 없고 그릇도 없네..."
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       섹션 4: PRODUCT - '고맙다옹' 패키지 분해 및 쇼케이스 (Slide 04)
+       ====================================================================== -->
+  <section class="section section-product" id="sec-product">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">All-in-One Dual Sphere Bowl</span>
+        <h2 class="section-title">'고맙다옹' 제품 분해 쇼케이스 & 라인업</h2>
+        <p class="section-desc">
+          사료와 깨끗한 물이 위아래로 분리 결합된 2단 반구형 캡슐 구조. 개봉 즉시 2개의 튼튼한 식기로 변환됩니다.
+        </p>
+      </div>
+
+      <!-- 라인업 탭 전환 버튼 -->
+      <div class="product-lineup-tabs">
+        <button type="button" class="lineup-tab kitten-tab active" id="tabKitten">
+          <span>🐱</span> 꼬마냥 밥물세트 (자묘용)
+        </button>
+        <button type="button" class="lineup-tab adult-tab" id="tabAdult">
+          <span>🌿</span> 어른냥 밥물세트 (성묘용)
+        </button>
+      </div>
+
+      <!-- 메인 제품 쇼케이스 박스 -->
+      <div class="product-showcase-grid kitten-theme" id="productShowcaseBox">
+        <div class="product-image-frame">
+          <img src="image (1).png" alt="고맙다옹 꼬마냥/어른냥 밥물세트 패키지 구성품 분해 뷰" id="productMainImg" class="zoomable-img">
+          
+          <div class="product-flip-controls">
+            <button type="button" class="btn-flip-view active" id="btnViewFront">
+              구성품 분해 뷰
+            </button>
+            <button type="button" class="btn-flip-view" id="btnViewBack">
+              슬리브 수칙 뷰
+            </button>
+          </div>
+        </div>
+
+        <div class="product-info-box">
+          <span class="product-info-tag" id="productTag">1세 미만 자묘용 (Kitten)</span>
+          <h3 class="product-info-title" id="productTitle">고맙다옹 꼬마냥 밥물세트</h3>
+          <div class="product-info-price" id="productPrice">2,500원 <span>/ 1세트</span></div>
+
+          <div class="exploded-parts-list">
+            <div class="part-item">
+              <span class="part-badge">상단 볼</span>
+              <div>
+                <h4>영양 맞춤 건식 사료 (80g)</h4>
+                <p id="partKibbleDesc">소화 흡수가 빠른 고단백 자묘 전용 키튼 건식 사료 (80g) + 안심 씰링</p>
+              </div>
+            </div>
+
+            <div class="part-item">
+              <span class="part-badge">하단 볼</span>
+              <div>
+                <h4>급여용 깨끗한 음용수 (컵 물)</h4>
+                <p>길고양이에게 가장 필요한 깨끗한 수분을 밀봉 공급하는 하단 투명 볼 구조</p>
+              </div>
+            </div>
+
+            <div class="part-item">
+              <span class="part-badge">동봉품</span>
+              <div>
+                <h4>접이식 친환경 위생 정리봉투</h4>
+                <p>식사 후 남은 사료와 플라스틱 볼을 한 번에 담아 손쉽게 수거할 수 있는 전용 봉투</p>
+              </div>
+            </div>
+
+            <div class="part-item">
+              <span class="part-badge">슬리브</span>
+              <div>
+                <h4>가로형 고정 밴드 & 3대 펫티켓 가이드</h4>
+                <p>상하 용기를 결합하는 슬리브 뒷면에 '책임 있는 급여 행동 수칙'을 직관적으로 인쇄</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       섹션 5: CLEAN FEEDING - 3대 책임 급여 가이드 (Slide 05)
+       ====================================================================== -->
+  <section class="section section-guide" id="sec-guide">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Clean Feeding Guidelines</span>
+        <h2 class="section-title">작은 한 끼가 만드는 더 따뜻한 공존, 3대 수칙</h2>
+        <p class="section-desc">
+          패키지 슬리브 뒷면에 인쇄되어 모든 구매자가 자연스럽게 실천하도록 돕는 성숙한 급여 문화 가이드라인입니다.
+        </p>
+      </div>
+
+      <div class="guide-cards-grid">
+        <!-- 수칙 1 -->
+        <div class="guide-card">
+          <div class="guide-card-num">1</div>
+          <h3 class="guide-card-title">주거공간 앞에서는<br>급여하지 않기</h3>
+          <p class="guide-card-desc">
+            현관, 대문, 빌라 공동현관 등 주민들이 자주 드나드는 생활 통행로는 피해주세요. 이웃 주민들의 불안감과 통행 불편을 사전에 예방합니다.
+          </p>
+        </div>
+
+        <!-- 수칙 2 -->
+        <div class="guide-card">
+          <div class="guide-card-num">2</div>
+          <h3 class="guide-card-title">급여 후 한 발짝<br>떨어져서 지켜보기</h3>
+          <p class="guide-card-desc">
+            사람이 너무 가까이 다가가면 고양이가 경계하여 밥을 먹지 못합니다. 1~2m 거리를 두고 고양이가 편안하게 식사하는지 지켜봐 주세요.
+          </p>
+        </div>
+
+        <!-- 수칙 3 -->
+        <div class="guide-card">
+          <div class="guide-card-num">3</div>
+          <h3 class="guide-card-title">남은 사료와 용기는<br>반드시 치우기</h3>
+          <p class="guide-card-desc">
+            길에 방치된 사료와 식기는 해충 및 악취의 원인이 됩니다. 고양이가 다 먹은 후 동봉된 정리봉투에 깨끗하게 담아 회수해주세요.
+          </p>
+        </div>
+      </div>
+
+      <!-- 강조 슬로건 배너 -->
+      <div class="guide-highlight-banner">
+        <div class="guide-banner-text">
+          <h4>"먹이를 파는 것이 아니라, 먹이는 올바른 방법을 팝니다"</h4>
+          <p>고양이에 대한 애정과 이웃 주민에 대한 배려가 조화를 이루는 이마트24만의 공존 철학입니다.</p>
+        </div>
+        <button type="button" class="btn-primary" onclick="document.querySelector('#sec-shorts').scrollIntoView({behavior:'smooth'})">
+          쇼츠 영상으로 보기 ➔
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       섹션 6: SHORTS SHOWCASE - 9:16 세로형 숏폼 영상 존 (Slide 06)
+       ====================================================================== -->
+  <section class="section section-shorts" id="sec-shorts">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" style="background: rgba(255, 184, 0, 0.2); color: #FFB800;">Viral Content Strategy</span>
+        <h2 class="section-title">9:16 숏폼 바이럴 영상 쇼케이스</h2>
+        <p class="section-desc">
+          인스타그램 릴스 및 유튜브 쇼츠 트렌드를 접목하여 2030 세대의 자발적 바이럴과 브랜드 팬덤을 형성합니다.
+        </p>
+      </div>
+
+      <div class="shorts-stage-layout">
+        <!-- 9:16 스마트폰 프레임 목업 -->
+        <div class="phone-mockup-wrapper">
+          <div class="phone-mockup">
+            <div class="phone-notch"></div>
+            
+            <div class="phone-screen" id="shortsScreen">
+              <!-- 실제 비디오 태그 (shorts.mp4 파일 투입 시 자동 로드) -->
+              <video id="shortsVideo" class="shorts-video-element" src="shorts.mp4" playsinline loop muted></video>
+
+              <!-- 비디오 파일 미존재 시 표시되는 고품질 9:16 시뮬레이터 커버 -->
+              <div class="shorts-fallback-cover" id="shortsFallback">
+                <img src="shorts_preview.jpg" alt="고맙다옹 9:16 쇼츠 프리뷰" id="shortsCoverImg">
+              </div>
+
+              <!-- 숏폼 오버레이 그라디언트 -->
+              <div class="shorts-overlay-gradient"></div>
+
+              <!-- 중앙 재생 버튼 -->
+              <button type="button" class="shorts-center-play-btn" id="shortsCenterPlayBtn" aria-label="재생">
+                ▶
+              </button>
+
+              <!-- 우측 인터랙션 액션 바 -->
+              <div class="shorts-side-actions">
+                <button type="button" class="shorts-action-btn" id="shortsLikeBtn" title="좋아요">
+                  <div class="btn-icon">❤️</div>
+                  <span id="shortsLikeCount">14.5k</span>
+                </button>
+
+                <button type="button" class="shorts-action-btn" id="shortsCommentBtn" title="댓글 보기">
+                  <div class="btn-icon">💬</div>
+                  <span>320</span>
+                </button>
+
+                <button type="button" class="shorts-action-btn" id="shortsShareBtn" title="공유하기">
+                  <div class="btn-icon">↗️</div>
+                  <span>공유</span>
+                </button>
+
+                <button type="button" class="shorts-action-btn" id="shortsSoundBtn" title="음소거 토글">
+                  <div class="btn-icon" id="shortsSoundIcon">🔇</div>
+                  <span>소리</span>
+                </button>
+              </div>
+
+              <!-- 하단 자막 및 메타 정보 -->
+              <div class="shorts-bottom-meta">
+                <div class="shorts-author-tag">
+                  <div class="shorts-author-avatar">e</div>
+                  <div class="shorts-author-name">@emart24_official</div>
+                </div>
+                <p class="shorts-caption-text">
+                  집 가는 길에 만난 치즈냥에게 물과 사료를 챙겨줬어요 🐱💛 뒷정리까지 깔끔하게! #고맙다옹 #이마트24PL #클린피딩
+                </p>
+                <div class="shorts-audio-track">
+                  <span>🎵</span> [BGM] 작은 한 끼의 마음 (Acoustic Lo-Fi)
+                </div>
+              </div>
+
+              <!-- 하단 프로그레스 바 -->
+              <div class="shorts-progress-bar-container">
+                <div class="shorts-progress-fill" id="shortsProgressFill"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 쇼츠 마케팅 전략 설명 -->
+        <div class="shorts-strategy-info">
+          <span class="shorts-badge">TIKTOK & REELS VIRAL PLAYBOOK</span>
+          <h3 class="shorts-title">"3분 퇴근길 힐링 챌린지"<br>2030 자발적 공유 확산</h3>
+
+          <div class="shorts-desc-list">
+            <div class="shorts-desc-item">
+              <h4>1. 공감대 중심의 숏폼 스토리텔링</h4>
+              <p>원룸촌 귀가길 ➔ 길고양이와의 따뜻한 눈맞춤 ➔ 이마트24에서 '고맙다옹' 구매 ➔ 사료/물 급여 ➔ 동봉 봉투로 흔적 없이 정리하는 15초 감성 브이로그 구성.</p>
+            </div>
+
+            <div class="shorts-desc-item">
+              <h4>2. 선한 영향력(#CleanFeeding) 챌린지</h4>
+              <p>단순 먹방이 아닌 "길고양이 챙기고 주변도 깨끗이 치우는 착한 펫티켓 챌린지"로 브랜드의 친환경·동물복지 진정성 확보.</p>
+            </div>
+
+            <div class="shorts-desc-item">
+              <h4>3. 편의점 즉시 구매 유입 (O2O 전환)</h4>
+              <p>"지금 집 근처 이마트24에서 바로 만나보세요" 매장 위치 확인 및 앱 스탬프 이벤트와 연계하여 오프라인 매장 방문 극대화.</p>
+            </div>
+          </div>
+
+          <!-- 비디오 파일 감지 및 플러그앤플레이 알림 박스 -->
+          <div class="shorts-file-notice" id="shortsFileNotice">
+            <div class="notice-icon">💡</div>
+            <p>
+              <strong>9:16 비디오 플러그앤플레이 지원:</strong><br>
+              현재 폴더에 <code>shorts.mp4</code> 영상 파일을 넣으면, 별도 코드 수정 없이 브라우저에서 자동으로 실제 비디오 재생 모드로 전환됩니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       섹션 7: STRATEGY - 차별화 포인트 및 현실적 리스크 관리 (Slide 07)
+       ====================================================================== -->
+  <section class="section section-strategy" id="sec-strategy">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Competitive Strategy & Risk Mitigation</span>
+        <h2 class="section-title">4대 핵심 차별화 & 현실적 리스크 관리 방안</h2>
+        <p class="section-desc">
+          사료 품질 경쟁을 넘어 완전한 고객 경험을 설계하고, 발생 가능한 현장 갈등 요소를 사전에 치밀하게 차단했습니다.
+        </p>
+      </div>
+
+      <div class="strategy-grid">
+        <!-- 4대 차별화 포인트 -->
+        <div class="differentiators-box">
+          <h3><span>✨</span> 4대 핵심 차별화 포인트</h3>
+          <div class="diff-list">
+            <div class="diff-item">
+              <div class="diff-icon">📦</div>
+              <div class="diff-content">
+                <h4>① 올인원 구성 (사료부터 뒷정리까지)</h4>
+                <p>사료, 식기 볼 2개, 컵 물, 회수용 봉투를 하나의 패키지로 구성하여 별도 준비물 부담을 완전히 해소했습니다.</p>
+              </div>
+            </div>
+
+            <div class="diff-item">
+              <div class="diff-icon">⚡</div>
+              <div class="diff-content">
+                <h4>② 즉시 구매·즉시 급여 (편의점 특화)</h4>
+                <p>사전 계획 구매가 아닌, 길에서 우연히 마주쳤을 때 가까운 이마트24에서 바로 사서 챙겨주는 즉시성 수요를 독점합니다.</p>
+              </div>
+            </div>
+
+            <div class="diff-item">
+              <div class="diff-icon">🧹</div>
+              <div class="diff-content">
+                <h4>③ 클린 피딩 (깨끗한 급여 문화 선도)</h4>
+                <p>회수용 봉투를 동봉하여 잔여물과 용기를 깨끗이 수거하도록 유도함으로써 골목길 오염과 민원을 방지합니다.</p>
+              </div>
+            </div>
+
+            <div class="diff-item">
+              <div class="diff-icon">💛</div>
+              <div class="diff-content">
+                <h4>④ 책임 있는 돌봄 (브랜드 가치 차별화)</h4>
+                <p>단순 먹이 판매를 넘어 고양이와 지역 주민이 평화롭게 공존할 수 있는 행동 양식을 제안하는 ESG 가치를 실현합니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2대 현실적 리스크와 극복 방안 -->
+        <div class="risks-box">
+          <h3><span>🛡️</span> 현실적인 리스크와 추가 대응 방향</h3>
+          <div class="risk-list">
+            <div class="risk-item">
+              <div class="risk-header">
+                <span class="risk-title">리스크 ① 고양이가 바로 먹지 않아 정리하지 못함</span>
+              </div>
+              <p class="risk-reason">
+                <strong>발생 이유:</strong> 경계심 때문에 사람이 있는 동안 먹지 않거나 자리를 뜰 수 있어 고객이 기다리다 용기를 두고 갈 가능성
+              </p>
+              <div class="risk-solution">
+                <strong>추가 대응:</strong> 먹지 않을 때도 사료와 용기를 회수하도록 패키지에 안내하고, 절대 '놓고 가는 상품'으로 홍보하지 않음
+              </div>
+            </div>
+
+            <div class="risk-item">
+              <div class="risk-header">
+                <span class="risk-title">리스크 ② 정리 여부와 별개로 급여 장소 갈등 발생</span>
+              </div>
+              <p class="risk-reason">
+                <strong>발생 이유:</strong> 사용 후 깨끗하게 치워도 특정 장소에 고양이가 모이는 것 자체를 주민이나 관리자가 불편해할 수 있음
+              </p>
+              <div class="risk-solution">
+                <strong>추가 대응:</strong> 급여 전 장소 관리 규칙 및 기존 돌봄 여부 확인 안내, 편의점 매장 바로 앞 급여를 유도하는 판촉 행위 일체 금지
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 발표용 핵심 문장 하이라이트 박스 -->
+      <div class="pitch-statement-box">
+        <div class="pitch-quote-mark">“</div>
+        <div class="pitch-quote-text">
+          <p>
+            고맙다옹은 성장하는 편의점 반려동물 상품 시장을 기반으로, <strong>길고양이를 챙기고 싶지만 준비물이 없는 고객을 공략</strong>합니다.
+            사료와 컵 물을 함께 제공하는 편의성에 정리봉투와 급여 안내를 더해, <strong>주거 상권 편의점에서 차별화된 확실한 구매 이유</strong>를 제시합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       섹션 8: RETAIL & IMPACT - 매대 진열 및 기대 효과 (Slide 08)
+       ====================================================================== -->
+  <section class="section section-retail" id="sec-retail">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Retail Execution & Business ROI</span>
+        <h2 class="section-title">이마트24 매대 진열 시뮬레이션 및 기대 효과</h2>
+        <p class="section-desc">
+          시선이 집중되는 골든존 배치와 감성적 POP로 매장 유입 고객의 충동 구매와 브랜드 신뢰도를 극대화합니다.
+        </p>
+      </div>
+
+      <!-- 매대 인터랙티브 핫스팟 쇼케이스 -->
+      <div class="shelf-showcase-wrap">
+        <img src="image_1024.png" alt="이마트24 반려동물용품 전용 매대 고맙다옹 진열 실사" class="zoomable-img">
+
+        <!-- 핫스팟 핀 1: 상단 헤더 보드 -->
+        <div class="hotspot-pin" style="top: 15%; left: 35%;" title="클릭하여 상세 정보 확인">
+          <span>1</span>
+          <div class="hotspot-tooltip">
+            [브랜드 헤더보드] "emart24 반려동물용품 - 작은 마음이 큰 행복이 됩니다"
+          </div>
+        </div>
+
+        <!-- 핫스팟 핀 2: 꼬마냥 세트 (키튼용) -->
+        <div class="hotspot-pin" style="top: 45%; left: 32%;" title="클릭하여 상세 정보 확인">
+          <span>2</span>
+          <div class="hotspot-tooltip">
+            [꼬마냥 밥물세트] 2,500원 / 웜 오렌지 컬러의 귀여운 자묘용 패키지
+          </div>
+        </div>
+
+        <!-- 핫스팟 핀 3: 어른냥 세트 (성묘용) -->
+        <div class="hotspot-pin" style="top: 45%; left: 70%;" title="클릭하여 상세 정보 확인">
+          <span>3</span>
+          <div class="hotspot-tooltip">
+            [어른냥 밥물세트] 2,800원 / 내추럴 세이지 그린의 성묘용 패키지
+          </div>
+        </div>
+
+        <!-- 핫스팟 핀 4: 중앙 POP 안내판 -->
+        <div class="hotspot-pin" style="top: 68%; left: 52%;" title="클릭하여 상세 정보 확인">
+          <span>4</span>
+          <div class="hotspot-tooltip">
+            [셀프 POP] "사료 + 컵 물 + 정리봉투 / 밥과 물을 챙기는 마음, 뒷정리까지"
+          </div>
+        </div>
+      </div>
+
+      <!-- 3대 기대효과 카드 그리드 -->
+      <div class="impact-cards-grid">
+        <div class="impact-card">
+          <span class="impact-badge">REVENUE EXPANSION</span>
+          <h4>편의점 펫 신규 카테고리 선점</h4>
+          <p>
+            기존에 없던 '길고양이 1회용 책임 급여 키트' 시장을 개척하여 객단가 상승과 주거 상권 내 편의점 매대 회전율을 획기적으로 향상시킵니다.
+          </p>
+        </div>
+
+        <div class="impact-card">
+          <span class="impact-badge">BRAND LOYALTY</span>
+          <h4>2030 1인 가구 브랜드 충성도 제고</h4>
+          <p>
+            반려동물을 직접 키우지 않더라도 생명을 존중하고 챙기고 싶어 하는 청년층의 감성을 저격하여, 이마트24에 대한 브랜드 선호도를 강화합니다.
+          </p>
+        </div>
+
+        <div class="impact-card">
+          <span class="impact-badge">ESG SOCIAL VALUE</span>
+          <h4>길고양이 민원 절감 및 지역 상생</h4>
+          <p>
+            버려지는 사료와 쓰레기로 인한 지자체 및 아파트 단지 내 이웃 갈등을 해소하고, 깨끗한 동네를 만드는 기업의 사회적 책임을 다합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       푸터 (Footer)
+       ====================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>emart24 X 고맙다옹</h3>
+          <p>한 끼의 마음까지 책임 있게 — 이마트24 단독 PL 상품 기획안</p>
+        </div>
+        <div>
+          <button type="button" class="btn-primary" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            맨 위로 이동 ▲
+          </button>
+        </div>
+      </div>
+
+      <div class="footer-notice">
+        <p>※ 본 웹페이지는 이마트24 PL 신상품 기획 및 대학교 상품기획 발표용 인터랙티브 프로토타입입니다.</p>
+        <p>※ 본 제안서의 저작권 및 기획 권한은 기획자에게 있으며, 무단 전재 및 배포를 금합니다. (기획일: 2026년 10월)</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================================
+       고해상도 이미지 라이트박스 (Lightbox)
+       ====================================================================== -->
+
+  <!-- ======================================================================
+       모달 2: 고해상도 이미지 라이트박스 (Lightbox)
+       ====================================================================== -->
+  <div class="lightbox-overlay" id="lightboxOverlay" role="dialog" aria-modal="true" aria-label="이미지 확대 보기">
+    <img src="" alt="" class="lightbox-img" id="lightboxImg">
+  </div>
+
+  <!-- 스크립트 로드 -->
+  <script src="js/main.js"></script>
+</body>
+</html>
