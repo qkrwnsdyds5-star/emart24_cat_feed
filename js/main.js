@@ -197,25 +197,32 @@ function initShortsPlayer() {
   const simDuration = 15; // 15 seconds loop
   let simInterval = null;
 
-  // 비디오 파일 존재 여부 검사
+  // 비디오 파일 활성화 및 이벤트 바인딩
+  function activateRealVideo() {
+    isRealVideo = true;
+    video.style.display = 'block';
+    if (fallbackCover) fallbackCover.style.display = 'none';
+    if (fileNotice) {
+      fileNotice.innerHTML = `
+        <div class="notice-icon">🎬</div>
+        <p><strong>실제 9:16 쇼츠 영상 연동 완료:</strong> KakaoTalk_20261015_142325083.mp4 영상이 정상 로드되었습니다. 화면을 클릭하여 감상해 보세요!</p>
+      `;
+      fileNotice.style.background = 'rgba(78, 135, 101, 0.2)';
+      fileNotice.style.borderColor = '#4E8765';
+    }
+  }
+
   if (video) {
-    video.addEventListener('canplay', () => {
-      // 실제 비디오 파일 로드 성공 시
-      isRealVideo = true;
-      video.style.display = 'block';
-      if (fallbackCover) fallbackCover.style.display = 'none';
-      if (fileNotice) {
-        fileNotice.innerHTML = `
-          <div class="notice-icon">🎥</div>
-          <p><strong>실제 영상 연동 완료!</strong> 고맙다옹 세로 숏폼 영상(shorts.mp4)이 정상적으로 재생됩니다.</p>
-        `;
-        fileNotice.style.background = 'rgba(78, 135, 101, 0.2)';
-        fileNotice.style.borderColor = '#4E8765';
-      }
-    });
+    if (video.readyState >= 1) {
+      activateRealVideo();
+    } else {
+      video.addEventListener('loadedmetadata', activateRealVideo);
+      video.addEventListener('canplay', activateRealVideo);
+      video.addEventListener('loadeddata', activateRealVideo);
+      video.load();
+    }
 
     video.addEventListener('error', () => {
-      // 비디오 파일이 없을 때 (현재 상태)
       isRealVideo = false;
       video.style.display = 'none';
       if (fallbackCover) fallbackCover.style.display = 'block';
@@ -227,25 +234,34 @@ function initShortsPlayer() {
         if (progressFill) progressFill.style.width = `${pct}%`;
       }
     });
+
+    video.addEventListener('play', () => {
+      isPlaying = true;
+      if (centerPlayBtn) centerPlayBtn.style.opacity = '0';
+    });
+
+    video.addEventListener('pause', () => {
+      isPlaying = false;
+      if (centerPlayBtn) {
+        centerPlayBtn.style.opacity = '1';
+        centerPlayBtn.innerHTML = '▶';
+      }
+    });
   }
 
   // 재생 / 일시정지 토글
   function togglePlay() {
-    isPlaying = !isPlaying;
-
     if (isRealVideo && video) {
-      if (isPlaying) {
-        video.play();
-        if (centerPlayBtn) centerPlayBtn.style.opacity = '0';
+      if (video.paused) {
+        video.play().catch(err => {
+          console.warn('Video playback warning:', err);
+        });
       } else {
         video.pause();
-        if (centerPlayBtn) {
-          centerPlayBtn.style.opacity = '1';
-          centerPlayBtn.innerHTML = '▶';
-        }
       }
     } else {
       // 가상 시뮬레이션 모드
+      isPlaying = !isPlaying;
       if (isPlaying) {
         if (centerPlayBtn) centerPlayBtn.style.opacity = '0';
         clearInterval(simInterval);
@@ -263,6 +279,23 @@ function initShortsPlayer() {
         clearInterval(simInterval);
       }
     }
+  }
+
+  // 타임라인 클릭 탐색 (Seek)
+  const progressContainer = document.querySelector('.shorts-progress-bar-container');
+  if (progressContainer) {
+    progressContainer.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const rect = progressContainer.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const ratio = Math.max(0, Math.min(1, clickX / rect.width));
+      if (isRealVideo && video && video.duration) {
+        video.currentTime = ratio * video.duration;
+      } else {
+        simTime = ratio * simDuration;
+        if (progressFill) progressFill.style.width = `${ratio * 100}%`;
+      }
+    });
   }
 
   if (centerPlayBtn) {

@@ -510,10 +510,10 @@
             <div class="phone-notch"></div>
             
             <div class="phone-screen" id="shortsScreen">
-              <!-- 실제 비디오 태그 (shorts.mp4 파일 투입 시 자동 로드) -->
-              <video id="shortsVideo" class="shorts-video-element" src="shorts.mp4" playsinline loop muted></video>
+              <!-- 실제 숏폼 비디오 태그 -->
+              <video id="shortsVideo" class="shorts-video-element" src="KakaoTalk_20261015_142325083.mp4" playsinline loop muted preload="auto"></video>
 
-              <!-- 비디오 파일 미존재 시 표시되는 고품질 9:16 시뮬레이터 커버 -->
+              <!-- 비디오 로드 대기/폴백 시 커버 -->
               <div class="shorts-fallback-cover" id="shortsFallback">
                 <img src="shorts_preview.jpg" alt="고맙다옹 9:16 쇼츠 프리뷰" id="shortsCoverImg">
               </div>
@@ -593,12 +593,12 @@
             </div>
           </div>
 
-          <!-- 비디오 파일 감지 및 플러그앤플레이 알림 박스 -->
-          <div class="shorts-file-notice" id="shortsFileNotice">
-            <div class="notice-icon">💡</div>
-            <p>
-              <strong>9:16 비디오 플러그앤플레이 지원:</strong><br>
-              현재 폴더에 <code>shorts.mp4</code> 영상 파일을 넣으면, 별도 코드 수정 없이 브라우저에서 자동으로 실제 비디오 재생 모드로 전환됩니다.
+          <!-- 비디오 파일 연동 완료 알림 박스 -->
+          <div class="shorts-file-notice" id="shortsFileNotice" style="background: rgba(78, 135, 101, 0.16); border-color: rgba(78, 135, 101, 0.5);">
+            <div class="notice-icon">🎬</div>
+            <p style="color: #A3E0BA;">
+              <strong>실제 9:16 쇼츠 영상 연동 완료:</strong><br>
+              <code>KakaoTalk_20261015_142325083.mp4</code> 영상이 성공적으로 삽입되었습니다. 스마트폰 화면을 클릭하여 영상 재생, 사운드, 하트 인터랙션을 확인해 보세요!
             </p>
           </div>
         </div>
